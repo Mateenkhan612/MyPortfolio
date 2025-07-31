@@ -19,3 +19,16 @@ links.forEach(link => {
         over.classList.remove("active");
     });
 });
+
+// -- Initialize Swiper --
+var swiper = new Swiper(".mySwiper", {
+    direction: "horizontal",
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 20,
+    mousewheel: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
