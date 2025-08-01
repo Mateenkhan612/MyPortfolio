@@ -24,6 +24,10 @@ links.forEach(link => {
 var swiper = new Swiper(".mySwiper", {
     direction: "horizontal",
     loop: true,
+    // autoplay: {
+    //     delay: 5000,
+    //     disableOnInteraction: false,
+    // },
     slidesPerView: 3,
     spaceBetween: 20,
     mousewheel: true,
@@ -31,4 +35,14 @@ var swiper = new Swiper(".mySwiper", {
         el: ".swiper-pagination",
         clickable: true,
     },
+});
+
+// Expereience Swiper
+var swiper=new Swiper(".mySwiperex", {
+  effect: "cards",
+  grabCursor: true,
+//   autoplay: {
+//     delay: 5000,
+//     disableOnInteraction: false,
+//   },
 });
