@@ -8,8 +8,11 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
-    <title>Hello, world!</title>
+    <title>Abdul Mateen Khan</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
 </head>
 
 <body>
@@ -25,6 +28,8 @@
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="social">
@@ -77,17 +82,17 @@
     <div
         class="hero d-flex container-fluid flex-lg-row flex-md-column flex-sm-column align-items-center justify-content-between">
         <div class="content col-lg-10 col-md-12 col-sm-12">
-            <h2>Hi, I'm Abdul Mateen Khan</h2>
-            <h1>A passionate Web <span> Developer</span>
+            <h2 data-aos="zoom-in">Hi, I'm Abdul Mateen Khan</h2>
+            <h1 data-aos="zoom-in">A passionate Web <span> Developer</span>
                 who designs clean UIs, builds
                 interactive experiences, and
                 brings ideas to life online.</h1>
-            <button onclick="window.open('2k25CV.pdf', '_blank')">Download CV</button>
+            <button data-aos="fade-down" onclick="window.open('2k25CV.pdf', '_blank')">Download CV</button>
             <a href="#contact">
-                <button>Hire Me</button>
+                <button data-aos="fade-down">Hire Me</button>
             </a>
         </div>
-        <div
+        <div data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="300" data-aos="fade-up"
             class="social col-lg-2 col-md-12 col-sm-12 d-flex flex-column align-items-center justify-content-center flex-lg-column flex-md-row flex-sm-row gap-4">
             <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
             <a href="https://wa.me/923083351612"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
@@ -102,14 +107,13 @@
     </div>
     <!-- Hero Section Ends -->
 
-
     <!-- About starts -->
     <div class="container-fluid py-5" id="about">
-        <div class="row section-header text-center">
-            <p>Code. Create. Convert.</p>
+        <div data-aos="fade-down" class="row section-header text-center">
+            <p class="fst-italic">Code. Create. Convert.</p>
             <h1>Explore my web development journey.</h1>
         </div>
-        <div class="row desc text-center">
+        <div data-aos="fade-up" class="row desc text-center">
             <p>Welcome to my Portfolio! As a dedicated Web Developer with a strong foundation in frontend and WordPress
                 development, I specialize in creating seamless, user-friendly websites. I have successfully contributed
                 to diverse projects, including Learning Management Systems and e-commerce platforms. Currently, I am
@@ -118,7 +122,7 @@
                 leverage my technical expertise and passion for web development to build innovative solutions that
                 enhance user experiences.</p>
         </div>
-        <div class="stats row justify-content-evenly text-center mt-5">
+        <div data-aos="zoom-in" class="stats row justify-content-evenly text-center mt-5">
             <div class="col-lg-2">
                 <h1>127</h1>
                 <p>Award Received</p>
@@ -148,80 +152,11 @@
     </div>
     <!-- About ends -->
 
-    <!-- Services starts -->
-    <!-- <div class="container-fluid py-5" id="services">
-        <div class="row section-header text-center">
-            <p class="text-dark">My Skills</p>
-            <h1>What I Do?</h1>
-        </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <div class="card p-3 skill-card">
-                    <div class="card-body">
-                        <h5 class="card-title text-center mb-4"><span class="me-2"><i class="fa fa-cogs"
-                                    aria-hidden="true"></i></span>Custom Web Development</h5>
-                        <p class="card-text">I create responsive and user-friendly websites using HTML, CSS, and
-                            JavaScript.
-                            My focus is on delivering high-quality code that meets modern web standards.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card p-3 skill-card">
-                    <div class="card-body">
-                        <h5 class="card-title text-center mb-4"><span class="me-2"><i class="fa fa-wordpress"
-                                    aria-hidden="true"></i></span>WordPress Development</h5>
-                        <p class="card-text">I create responsive and user-friendly websites using HTML, CSS, and
-                            JavaScript.
-                            My focus is on delivering high-quality code that meets modern web standards.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card p-3 skill-card">
-                    <div class="card-body">
-                        <h5 class="card-title text-center mb-4"><span class="me-2"><i class="fa fa-paint-brush"
-                                    aria-hidden="true"></i></span>Web Design</h5>
-                        <p class="card-text">I create responsive and user-friendly websites using HTML, CSS, and
-                            JavaScript.
-                            My focus is on delivering high-quality code that meets modern web standards.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="row mt-3 justify-content-center">
-            <div class="col-lg-4">
-                <div class="card p-3 skill-card">
-                    <div class="card-body">
-                        <h5 class="card-title text-center mb-4"><span class="me-2"><i class="fa fa-wordpress"
-                                    aria-hidden="true"></i></span>WordPress Development</h5>
-                        <p class="card-text">I create responsive and user-friendly websites using HTML, CSS, and
-                            JavaScript.
-                            My focus is on delivering high-quality code that meets modern web standards.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="card p-3 skill-card">
-                    <div class="card-body">
-                        <h5 class="card-title text-center mb-4"><span class="me-2"><i class="fa fa-paint-brush"
-                                    aria-hidden="true"></i></span>Web Design</h5>
-                        <p class="card-text">I create responsive and user-friendly websites using HTML, CSS, and
-                            JavaScript.
-                            My focus is on delivering high-quality code that meets modern web standards.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div> -->
-    <!-- Services ends -->
-
-
+    <!-- Service Section starts -->
     <section class="services-section" id="services">
-        <h2 class="section-title">What I Do?</h2>
-        <div class="services-grid">
+        <h2 data-aos="fade-up" class="section-title mb-3">What I Do?</h2>
+        <p data-aos="fade-up" class="fst-italic">End-to-End Development Services</p>
+        <div class="services-grid" data-aos="zoom-in">
 
             <div class="service-card">
                 <h3>🧑‍💻 Web Development</h3>
@@ -261,13 +196,13 @@
 
         </div>
     </section>
-
+    <!-- Service Section ends -->
 
     <!--Projects Swiper -->
     <div class="projects container text-center my-5" id="projects">
-        <h1 class="section-title mb-3">Things I’ve Built</h1>
-        <p>Scroll through and discover my web development journey.</p>
-        <div class="swiper mySwiper">
+        <h1 data-aos="fade-down" class="section-title mb-3">Things I’ve Built</h1>
+        <p data-aos="fade-up" class="fst-italic">Scroll through and discover my web development journey.</p>
+        <div data-aos="zoom-in" class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <a href="#">
@@ -312,8 +247,8 @@
 
     <!-- Experience Section -->
     <div id="experience" class="container py-5 text-center">
-        <h1 class="section-title mb-3">My Career Path</h1>
-        <div class="swiper mySwiperex">
+        <h1 data-aos="fade-down" class="section-title mb-3">My Career Path</h1>
+        <div data-aos="zoom-out" class="swiper mySwiperex">
             <div class="swiper-wrapper">
                 <div class="swiper-slide ex-card">
                     <img src="https://therevotech.com/wp-content/uploads/2023/05/logo.svg" alt="">
@@ -325,29 +260,106 @@
                 <div class="swiper-slide ex-card">
                     <img src="https://industechnetronic.com/assets/Indus-logo-e2c8aa58.svg" alt="">
                     <h2>Frontend Developer<span> (2022-2023)</span></h2>
-                    <p>At Indus Techatronic Pvt Ltd, I served as a Frontend Developer, focusing on creating and maintaining the front-end of various web applications. Utilizing technologies such as HTML, CSS, and JavaScript, I collaborated closely with a talented team to deliver high-quality, user-friendly interfaces. This role allowed me to refine my coding skills and understand the importance of teamwork and effective communication in achieving project goals. The collaborative environment at Indus Techatronic provided me with valuable insights into the development process and strengthened my ability to work efficiently within a team.</p>
+                    <p>At Indus Techatronic Pvt Ltd, I served as a Frontend Developer, focusing on creating and
+                        maintaining the front-end of various web applications. Utilizing technologies such as HTML, CSS,
+                        and JavaScript, I collaborated closely with a talented team to deliver high-quality,
+                        user-friendly interfaces. This role allowed me to refine my coding skills and understand the
+                        importance of teamwork and effective communication in achieving project goals. The collaborative
+                        environment at Indus Techatronic provided me with valuable insights into the development process
+                        and strengthened my ability to work efficiently within a team.</p>
                 </div>
                 <div class="swiper-slide ex-card">
                     <img src="monitr.png" alt="">
                     <h2>Frontend Developer<span> (2021-2022)</span></h2>
-                    <p>At Monitr Pvt Ltd, I held the position of leader of the frontend team, where our primary project was the development of a Learning Management System (LMS). My responsibilities included overseeing the frontend development process, ensuring the implementation of high-quality, responsive, and user-friendly interfaces using HTML, CSS, and JavaScript. Leading the LMS project allowed me to hone my leadership and project management skills, coordinating efforts within the team to deliver a robust and efficient learning platform. This experience was instrumental in enhancing my ability to lead and execute complex projects, contributing significantly to my professional growth.</p>
+                    <p>At Monitr Pvt Ltd, I held the position of leader of the frontend team, where our primary project
+                        was the development of a Learning Management System (LMS). My responsibilities included
+                        overseeing the frontend development process, ensuring the implementation of high-quality,
+                        responsive, and user-friendly interfaces using HTML, CSS, and JavaScript. Leading the LMS
+                        project allowed me to hone my leadership and project management skills, coordinating efforts
+                        within the team to deliver a robust and efficient learning platform. This experience was
+                        instrumental in enhancing my ability to lead and execute complex projects, contributing
+                        significantly to my professional growth.</p>
                 </div>
-                
+
             </div>
         </div>
-        <h5 class="mt-3">Swipe left to discover each chapter...</h5>
+        <p class="mt-3 fst-italic">Swipe left to discover each chapter...</p>
 
     </div>
 
+
+    <div class="container py-5" id="education">
+        <h1 data-aos="fade-down" class="section-title mb-3 text-center">Education</h1>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Bachelors
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="timeline-item">
+                            <span class="date">2022 – 2025</span>
+                            <h3>BS in Information Technology</h3>
+                            <p>University of Sindh, Jamshoro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Intermediate
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="timeline-item">
+                            <span class="date">2019 – 2021</span>
+                            <h3>Intermediate (Pre-Engineering)</h3>
+                            <p>TABS College, Hyderabad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Matriculation
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <div class="timeline-item">
+                            <span class="date">2017 – 2019</span>
+                            <h3>Matric (Computer Science)</h3>
+                            <p>Fauji Foundation Model School, Hyderabad</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Education -->
+
+
+
     <!-- Contact section starts -->
     <div class="contact-section container-fluid py-5 mt-5" id="contact">
-        <div class="conatiner">
+        <div data-aos="fade-down" class="conatiner">
             <div class="row section-header text-center">
                 <p>Get in Touch</p>
                 <h1>Contact Me</h1>
             </div>
         </div>
-        <div class="contact-container">
+        <div data-aos="zoom-out" class="contact-container">
             <div class="form-box">
                 <h3 class="mb-4">Send me a message</h3>
                 <form>
@@ -424,6 +436,14 @@
         crossorigin="anonymous"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            offset: 200,
+            once: true,
+        });
+    </script>
 
     <script src="script.js"></script>
 

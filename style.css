@@ -408,7 +408,7 @@ footer {
 
 .section-title {
   font-size: 36px;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 40px;
   color: #222;
 }
@@ -560,4 +560,17 @@ body {
   background: var(--light) !important;
   opacity: 0.9 !important;
 
+}
+.accordion-button:not(.collapsed) {
+  color: var(--light) !important;
+  background-color: var(--dark);
+}
+
+.accordion-button{
+  background-color: var(--light);
+  color: var(--dark);
+  font-size: 1.2rem;
+}
+.accordion-button:focus {
+  box-shadow: none !important;
 }
