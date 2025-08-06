@@ -22,20 +22,34 @@ links.forEach(link => {
 
 // -- Initialize Swiper --
 var swiper = new Swiper(".mySwiper", {
-    direction: "horizontal",
-    loop: true,
-    // autoplay: {
-    //     delay: 5000,
-    //     disableOnInteraction: false,
-    // },
-    slidesPerView: 3,
-    spaceBetween: 20,
-    mousewheel: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+  direction: "horizontal",
+  loop: true,
+  slidesPerView: 3, // Default for large screens
+  spaceBetween: 20,
+  mousewheel: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    // when window width is >= 992px (desktop)
+    992: {
+      slidesPerView: 3,
+      spaceBetween: 20,
     },
+    // when window width is >= 768px (tablet)
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    // when window width is < 768px (mobile)
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+  },
 });
+
 
 // Expereience Swiper
 var swiper=new Swiper(".mySwiperex", {

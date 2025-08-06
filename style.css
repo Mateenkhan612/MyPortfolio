@@ -303,13 +303,12 @@ form button:hover {
 
 /* Toggle button */
 #menu-btn {
-  /* margin: 20px; */
-  font-size: 18px;
+  font-size: clamp(16px, 2vw, 20px);
   padding: 10px 20px;
   cursor: pointer;
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: clamp(10px, 2%, 20px);
+  right: clamp(10px, 2%, 20px);
   z-index: 1000;
   border: none;
   border-radius: 5px;
@@ -449,7 +448,7 @@ footer {
 
 html,
 body {
-  position: relative;
+  /* position: relative; */
   height: 100%;
 }
 
@@ -531,46 +530,236 @@ body {
   background-color: var(--light);
   color: var(--dark);
 }
+
 #experience .swiper-slide:nth-child(2n) {
   background-color: var(--dark);
   color: var(--light);
 }
+
 #experience .swiper-slide:nth-child(3n) {
   background-color: var(--light);
   color: var(--dark);
 }
 
-.ex-card img{
+.ex-card img {
   width: 180px;
   height: 100px;
 }
+
 .ex-card h2 {
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
+
 .ex-card span {
   font-size: 1rem;
   color: var(--text);
 }
+
 .swiper-pagination-bullet {
   background: var(--darkmixlight) !important;
   opacity: 0.7 !important;
 }
-.swiper-pagination-bullet-active{
+
+.swiper-pagination-bullet-active {
   background: var(--light) !important;
   opacity: 0.9 !important;
 
 }
+
 .accordion-button:not(.collapsed) {
   color: var(--light) !important;
   background-color: var(--dark);
 }
 
-.accordion-button{
+.accordion-button {
   background-color: var(--light);
   color: var(--dark);
   font-size: 1.2rem;
 }
+
 .accordion-button:focus {
   box-shadow: none !important;
+}
+
+
+
+/* Tablet break point */
+/* Tablet breakpoint (landscape tablets & small desktops) */
+@media (max-width: 992px) {
+  #menu-btn {
+    position: absolute;
+  }
+
+  .hero {
+    padding: 50px 0px;
+    /* background-attachment: scroll; */
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .content {
+    padding: 0px;
+  }
+
+  .social {
+    padding-top: 50px;
+  }
+
+  .scroll-down,
+  .scroll-up {
+    display: none;
+  }
+
+  #about {
+    padding: 0 50px;
+  }
+
+  .services-grid {
+    gap: 20px;
+  }
+
+  .swiper {
+    height: 400px;
+  }
+
+  #experience .swiper {
+    width: 90%;
+    height: 350px;
+  }
+
+  #experience,
+  #projects,
+  #education,
+  #skills {
+    margin: 0;
+  }
+}
+
+/* Mobile breakpoint (phones & small devices) */
+@media (max-width: 576px) {
+  #menu-btn {
+    top: 8px;
+    right: 8px;
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .scroll-down,
+  .scroll-up {
+    display: none;
+  }
+
+  .hero {
+    padding: 50px 30px;
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 1.2rem;
+    text-align: left;
+    line-height: 1.5;
+  }
+
+  .hero h2 {
+    font-size: 0.8rem;
+    text-align: left;
+    letter-spacing: 0.15rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .content {
+    padding: 20px 0px;
+    text-align: center;
+  }
+
+  .content button {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    padding: 6px 0;
+  }
+
+  .social {
+    padding-top: 10px;
+  }
+
+  #about {
+    padding: 0 15px;
+  }
+  .section-header h1, .section-title {
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 1.5;
+  }
+  #about p{
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  #about .desc p{
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  .stats{
+    margin-top: 20px !important;
+  }
+  .stats h1{
+    font-size: 1.2rem;
+  }
+  .stats p{
+    font-size: 0.9rem;
+  /* text-align: left; */
+  }
+  .col-sms{
+    width: 25%;
+    margin: 0 auto;
+  }
+  .line{
+    display: none;
+  }
+  .services-section {
+    padding: 30px 20px;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .swiper {
+    height: 320px;
+  }
+
+  #experience .swiper {
+    width: 100%;
+    height: 300px;
+  }
+
+  .scroll-up {
+    right: 8px;
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+
+  #sidebar {
+    width: 200px;
+  }
+
+  #sidebar ul li a {
+    font-size: 1rem;
+  }
+
+  #sidebar .social i {
+    font-size: 20px;
+  }
 }
