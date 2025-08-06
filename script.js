@@ -60,3 +60,32 @@ var swiper=new Swiper(".mySwiperex", {
 //     disableOnInteraction: false,
 //   },
 });
+
+function animateSkills() {
+    const skillLevels = document.querySelectorAll('.skill-level');
+    skillLevels.forEach(level => {
+      const targetWidth = level.getAttribute('data-width');
+      level.style.width = targetWidth;
+    });
+  }
+
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom > 0
+    );
+  }
+
+  function checkSkillsInView() {
+    const skillsSection = document.querySelector('.skills-section');
+    if (isElementInViewport(skillsSection)) {
+      animateSkills();
+      window.removeEventListener('scroll', checkSkillsInView);
+      window.removeEventListener('resize', checkSkillsInView);
+    }
+  }
+
+  window.addEventListener('scroll', checkSkillsInView);
+  window.addEventListener('resize', checkSkillsInView);
+  window.addEventListener('load', checkSkillsInView);

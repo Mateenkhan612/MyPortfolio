@@ -68,7 +68,7 @@ nav {
   /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('https://i0.wp.com/junilearning.com/wp-content/uploads/2024/01/image-57.jpeg?resize=800%2C534&ssl=1'); */
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('WhatsApp-Image-2024-08-01-at-2.24.55-PM-1.jpeg');
+    url('../images/WhatsApp-Image-2024-08-01-at-2.24.55-PM-1.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -130,7 +130,7 @@ nav {
 }
 
 .social {
-  padding-top: 120px;
+  padding-top: 50px;
 }
 
 .social i {
@@ -220,7 +220,7 @@ nav {
 .contact-section {
   padding: 120px 20px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('contact-bg.jpg.webp');
+    url('../images/contact-bg.jpg.webp');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -558,11 +558,61 @@ footer {
   box-shadow: none !important;
 }
 
+.skills-section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.skills-section h2 {
+  /* font-size: 32px; */
+  margin: 10px 0 20px;
+}
+
+.skills-section p {
+  color: #555;
+  /* font-size: 16px; */
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.skill {
+  text-align: left;
+}
+
+.skill span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.skill-bar {
+  background: #eee;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.skill-level {
+  height: 10px;
+  color: #fff;
+  text-align: right;
+  padding-right: 8px;
+  line-height: 10px;
+  font-size: 12px;
+  border-radius: 50px;
+  width: 0; /* Start from 0% */
+  transition: width 1.5s ease-in-out;
+}
+
 /* Tablet break point */
 @media (max-width: 992px) {
-  #menu-btn {
-    position: absolute;
-  }
 
   .hero {
     padding: 50px 0px;
@@ -633,6 +683,7 @@ footer {
   .hero {
     padding: 50px 30px;
     flex-direction: column;
+    background-attachment: scroll;
   }
 
   .hero h1 {
@@ -766,6 +817,11 @@ footer {
 
   #sidebar .social i {
     font-size: 20px;
+  }
+
+  form button {
+    padding: 6px;
+    font-size: 0.9rem;
   }
 
   footer p {
