@@ -4,21 +4,28 @@ const closeBtn = document.getElementById("close-btn");
 const links = document.querySelectorAll("#sidebar ul li a");
 
 menuBtn.addEventListener("click", () => {
-    sidebar.classList.add("active");
-    over.classList.add("active");
+  sidebar.classList.add("active");
+  over.classList.add("active");
 });
 
 closeBtn.addEventListener("click", () => {
-    sidebar.classList.remove("active");
-    over.classList.remove("active");
+  sidebar.classList.remove("active");
+  over.classList.remove("active");
 });
 
 links.forEach(link => {
-    link.addEventListener("click", () => {
-        sidebar.classList.remove("active");
-        over.classList.remove("active");
-    });
+  link.addEventListener("click", () => {
+    sidebar.classList.remove("active");
+    over.classList.remove("active");
+  });
 });
+
+AOS.init({
+  duration: 1200,
+  offset: 200,
+  once: true,
+});
+
 
 // -- Initialize Swiper --
 var swiper = new Swiper(".mySwiper", {
@@ -52,40 +59,40 @@ var swiper = new Swiper(".mySwiper", {
 
 
 // Expereience Swiper
-var swiper=new Swiper(".mySwiperex", {
+var swiper = new Swiper(".mySwiperex", {
   effect: "cards",
   grabCursor: true,
-//   autoplay: {
-//     delay: 5000,
-//     disableOnInteraction: false,
-//   },
+  //   autoplay: {
+  //     delay: 5000,
+  //     disableOnInteraction: false,
+  //   },
 });
 
 function animateSkills() {
-    const skillLevels = document.querySelectorAll('.skill-level');
-    skillLevels.forEach(level => {
-      const targetWidth = level.getAttribute('data-width');
-      level.style.width = targetWidth;
-    });
-  }
+  const skillLevels = document.querySelectorAll('.skill-level');
+  skillLevels.forEach(level => {
+    const targetWidth = level.getAttribute('data-width');
+    level.style.width = targetWidth;
+  });
+}
 
-  function isElementInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return (
-      rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.bottom > 0
-    );
-  }
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.bottom > 0
+  );
+}
 
-  function checkSkillsInView() {
-    const skillsSection = document.querySelector('.skills-section');
-    if (isElementInViewport(skillsSection)) {
-      animateSkills();
-      window.removeEventListener('scroll', checkSkillsInView);
-      window.removeEventListener('resize', checkSkillsInView);
-    }
+function checkSkillsInView() {
+  const skillsSection = document.querySelector('.skills-section');
+  if (isElementInViewport(skillsSection)) {
+    animateSkills();
+    window.removeEventListener('scroll', checkSkillsInView);
+    window.removeEventListener('resize', checkSkillsInView);
   }
+}
 
-  window.addEventListener('scroll', checkSkillsInView);
-  window.addEventListener('resize', checkSkillsInView);
-  window.addEventListener('load', checkSkillsInView);
+window.addEventListener('scroll', checkSkillsInView);
+window.addEventListener('resize', checkSkillsInView);
+window.addEventListener('load', checkSkillsInView);

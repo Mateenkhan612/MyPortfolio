@@ -681,15 +681,15 @@ footer {
   }
 
   .hero {
-    padding: 50px 30px;
+    padding: 100px 30px;
     flex-direction: column;
     background-attachment: scroll;
   }
 
   .hero h1 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-align: left;
-    line-height: 1.5;
+    line-height: 1.7;
   }
 
   .hero h2 {
@@ -757,12 +757,16 @@ footer {
   }
 
   .col-sms {
-    width: 25%;
+    width: 20%;
     margin: 0 auto;
+    padding: 0;
   }
 
   .line {
-    display: none;
+    width: 1%;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
   }
 
   .services-section {
