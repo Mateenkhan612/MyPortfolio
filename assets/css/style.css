@@ -681,7 +681,7 @@ footer {
   }
 
   .hero {
-    padding: 100px 30px;
+    padding: 130px 30px;
     flex-direction: column;
     background-attachment: scroll;
   }
@@ -739,7 +739,7 @@ footer {
   }
 
   #about .desc p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 1.7;
   }
 
