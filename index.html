@@ -54,7 +54,8 @@
                 who designs clean UIs, builds
                 interactive experiences, and
                 brings ideas to life online.</h1>
-            <button data-aos="fade-down" onclick="window.open('./assets/docs/MateenCV.pdf', '_blank')">Download CV</button>
+            <button data-aos="fade-down" onclick="window.open('./assets/docs/MateenCV.pdf', '_blank')">Download
+                CV</button>
             <a href="#contact">
                 <button data-aos="fade-down">Hire Me</button>
             </a>
@@ -162,7 +163,8 @@
     <!-- Skills -->
     <section class="skills-section" id="skills">
         <h2 data-aos="fade-up" class="section-title mb-3">My Specialty</h2>
-        <p data-aos="fade-up" class="fst-italic">My skills are built on continuous learning and project experience, allowing me to develop modern, responsive, and visually appealing websites.</p>
+        <p data-aos="fade-up" class="fst-italic">My skills are built on continuous learning and project experience,
+            allowing me to develop modern, responsive, and visually appealing websites.</p>
 
         <div class="skills-grid">
             <div class="skill">
@@ -364,12 +366,12 @@
         <div data-aos="zoom-out" class="contact-container">
             <div class="form-box">
                 <h3 class="mb-4">Send me a message</h3>
-                <form>
+                <form id="contact-form">
                     <input type="text" id="name" name="name" placeholder="Your Name" required>
                     <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    <input type="text" placeholder="Subject" required>
+                    <input type="text" placeholder="Subject" name="subject" required>
                     <textarea placeholder="Your Message" rows="5" required id="message" name="message"></textarea>
-                    <button type="submit">SUBMIT</button>
+                    <button type="submit" data-bs-toggle="modal" data-bs-target="#staticBackdrop">SUBMIT</button>
                 </form>
             </div>
 
@@ -408,6 +410,43 @@
         </div>
     </a>
 
+    <!-- ✅ Success Modal -->
+    <div class="modal fade" id="successModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="successModalLabel">Success</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Message sent successfully! We will contact you soon.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ❌ Error Modal -->
+    <div class="modal fade" id="errorModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="errorModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="errorModalLabel">Error</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Failed to send message. Please try again later.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -440,6 +479,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("ESLXHe_x5wAJP7-fB"); // Replace with your Public Key
+        })();
+
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            emailjs.sendForm("service_3ajw9mk", "template_r461cnl", this)
+                .then(function () {
+                    // ✅ Success Modal open
+                    var successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                    successModal.show();
+                }, function (error) {
+                    // ❌ Error Modal open
+                    var errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+                    errorModal.show();
+                    console.error("EmailJS error: ", error);
+                });
+        });
+
+    </script>
+
 
 </body>
 
