@@ -96,3 +96,24 @@ function checkSkillsInView() {
 window.addEventListener('scroll', checkSkillsInView);
 window.addEventListener('resize', checkSkillsInView);
 window.addEventListener('load', checkSkillsInView);
+
+
+(function () {
+            emailjs.init("ESLXHe_x5wAJP7-fB"); 
+        })();
+
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            emailjs.sendForm("service_3ajw9mk", "template_r461cnl", this)
+                .then(function () {
+                    // ✅ Success Modal open
+                    var successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                    successModal.show();
+                }, function (error) {
+                    // ❌ Error Modal open
+                    var errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+                    errorModal.show();
+                    console.error("EmailJS error: ", error);
+                });
+        });

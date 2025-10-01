@@ -481,28 +481,6 @@
     <script src="script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-        (function () {
-            emailjs.init("ESLXHe_x5wAJP7-fB"); // Replace with your Public Key
-        })();
-
-        document.getElementById("contact-form").addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            emailjs.sendForm("service_3ajw9mk", "template_r461cnl", this)
-                .then(function () {
-                    // ✅ Success Modal open
-                    var successModal = new bootstrap.Modal(document.getElementById('successModal'));
-                    successModal.show();
-                }, function (error) {
-                    // ❌ Error Modal open
-                    var errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
-                    errorModal.show();
-                    console.error("EmailJS error: ", error);
-                });
-        });
-
-    </script>
 
 
 </body>
